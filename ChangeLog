@@ -1,0 +1,47 @@
+2.3.2
+
+Added further support for MSNP12
+Updated challenge response
+
+2.3.1-rc2
+
+Fixed cpu racing bug with select() polling
+
+Upgraded msn library to MSNP12
+
+Altered contactlist to a panel 'on top'
+
+Fixed nick change bug
+
+Fixed memory allocation issue (missing free()) -> src/notifperm.c
+
+Major bug fixed with sockets and conversations crossing each other by altering
+conversation storage arrays -> /clist
+
+Fixed bug with segfault on additional JOIN
+
+2.3.1-rc1
+
+#3 Fixed a bounds checking bug in src/command.c on opening a conversation
+
+Fixed buffer overflow with utf8 messages
+
+Replaced core command code with get_element use
+
+Fixed a read wait bug in src/notifperm.c
+
+2.2a
+
+Fixed a buffer overflow bug with MAX_MESSAGE_LEN
+previously this was set to 255, it has now been increased to 401
+
+Fixed a buffer underrun bug with the message queue
+msgqm had been defined with MAX_ACCOUNT_LEN rather than MAX_MESSAGE_LEN
+
+Added /dump to output a copy of the message queue to the screen for debugging
+
+Assorted cmd.c into two sepearte files, src/command.c and src/windows/cmd.c
+
+Added src/conversation.c
+
+Moved msn.c src/msn.c

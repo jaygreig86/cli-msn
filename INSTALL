@@ -1,0 +1,88 @@
+=========================================================================
+Document Purpose
+=========================================================================
+
+This Document describes how-to build and install the CLI-MSN Client 
+on a system.
+
+=========================================================================
+Typographical conventions
+=========================================================================
+
+Command lines written as
+
+	# command
+
+should be executed as the superuser.
+
+Command lines written as
+
+	% command
+
+should be executed as an unpriveleged user.
+
+=========================================================================
+Build Requirements
+=========================================================================
+
+	o ANSI/ISO C89/C90 C compiler, e.g GNU gcc
+	o ANSI C, NCurses Library, Lib Crypto, Lib SSL, Zlib
+	o Disk space: 44k to unpack, 88k to bild, 20k to install
+
+=========================================================================
+Installing
+=========================================================================
+
+1. Compile CLI-MSN
+   Run 'make' from the top-level directory.  With some systems you may 
+   need to use 'gmake' or even 'gnumake' instead of the default system
+   make.
+
+	% make
+
+  The above procedure will suit an unpriveleged user to simply run
+  the client from their home directory (See Running below).
+
+2. Test CLI-MSN
+   To simply test that the software compiled correctly, the following
+   command is used.
+
+	% ./msn
+
+   The program should then run sucessfuly showing the coloured interface.
+
+3. Install CLI-MSN
+   If you are a system administrator and wish to allow yourself and 
+   unpriveleged users to use CLI-MSN, then the following instructions
+   can be used to achieve this.
+
+   Run 'make install' from the top-level directory.  This will install the binary
+   'msn' into /usr/local/bin/.
+
+	# make install
+
+=========================================================================
+Running
+=========================================================================
+
+If you followed steps 1 through 3 the client is assumed to be installed
+in /usr/local/bin.  The client can now be run from the command line
+simply by using the command msn.
+
+	# msn
+
+To login and run the client the user@host to login with must be specified.
+
+	# msn example@hotmail.com
+
+See the README file for more information.
+
+=========================================================================
+Troubleshooting & Suggestions
+=========================================================================
+
+Currently there is no FAQ for the program, however, if you have any
+suggestions or require any technical help or find a bug, please email me
+at james@mor-pah.net.
+
+James (kernel)
