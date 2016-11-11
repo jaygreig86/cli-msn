@@ -59,7 +59,7 @@ Complete file-sending feature, and incorporate file receiving
 =========================================================================
 5. Feature Status
 =========================================================================
-
+```
 Fully Working Commands:
 
 /AWAY   -       Sets status to 'Away'
@@ -104,7 +104,7 @@ Partially Working Commands:
 /INVITE USER@HOST #		-	Invite a user into an already open conversation
 					specified by the conversation number.
 					The conversation number can be found in /QLIST.
-
+```
 =========================================================================
 6. Usage: Connecting & Logging in
 =========================================================================
